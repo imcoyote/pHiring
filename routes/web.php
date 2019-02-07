@@ -20,3 +20,7 @@ Route::post('pdfRegister', function (){
     var_dump($_POST);
     echo '</pre>';
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

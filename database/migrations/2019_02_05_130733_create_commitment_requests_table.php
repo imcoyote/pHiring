@@ -14,14 +14,14 @@ class CreateCommitmentRequestsTable extends Migration
     public function up()
     {
         Schema::create('commitment_requests', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_request');
             $table->timestamps();
 
             $table->integer('job_offer_id')->unsigned();
             $table->integer('users_id')->unsigned();
 
-            $table->foreign('job_offer_id')->reference('id_job_offer')->on('job_offers');
-            $table->foreign('users_id')->reference('id')->on('users');
+            $table->foreign('job_offer_id')->references('id_job_offer')->on('job_offers');
+            $table->foreign('users_id')->references('id')->on('users');
         });
     }
 

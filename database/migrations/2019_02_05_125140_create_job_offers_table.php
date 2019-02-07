@@ -23,7 +23,7 @@ class CreateJobOffersTable extends Migration
 
             $table->integer('departement_id')->unsigned();
 
-            $table->foreign('departement_id')->references('id_departement')->on('departement');
+            $table->foreign('departement_id')->references('id_departement')->on('departements');
         });
     }
 

@@ -23,7 +23,7 @@ class CreateDocumentsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('commitment_request_id')->unsigned();
 
-            $table->foreign('user_id')->reference('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

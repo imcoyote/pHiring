@@ -23,8 +23,8 @@ class CreateCommentsTable extends Migration
             $table->integer('commitment_request_id')->unsigned();
             $table->integer('users_id')->unsigned();
 
-            $table->foreign('commitment_request_id')->reference('id_requests')->on('commitment_requests');
-            $table->foreign('users_id')->reference('id')->on('users');
+            $table->foreign('commitment_request_id')->references('id_request')->on('commitment_requests');
+            $table->foreign('users_id')->references('id')->on('users');
         });
     }
 

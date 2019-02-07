@@ -16,6 +16,14 @@ class CreateDocumentsTable extends Migration
         Schema::create('documents', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+
+            $table->string('file_name');
+            $table->string('mime_type');
+
+            $table->integer('user_id')->unsigned();
+            $table->integer('commitment_request_id')->unsigned();
+
+            $table->foreign('user_id')->reference('id')->on('users');
         });
     }
 

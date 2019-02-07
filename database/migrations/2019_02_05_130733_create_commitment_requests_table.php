@@ -20,8 +20,8 @@ class CreateCommitmentRequestsTable extends Migration
             $table->integer('job_offer_id')->unsigned();
             $table->integer('users_id')->unsigned();
 
-            $table->foreign('job_offer_id')->reference('job_offers')->on('id_job_offer');
-            $table->foreign('users_id')->reference('users')->on('id');
+            $table->foreign('job_offer_id')->reference('id_job_offer')->on('job_offers');
+            $table->foreign('users_id')->reference('id')->on('users');
         });
     }
 

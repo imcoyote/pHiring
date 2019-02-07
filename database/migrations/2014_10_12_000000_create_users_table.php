@@ -44,6 +44,10 @@ class CreateUsersTable extends Migration
             $table->string('reference_enterprise_name');
             $table->string('reference_phone_number');
             $table->string('reference_adress');
+
+            $table->integer('role_id')->unsigned();
+
+            $table->foreign('role_id')->reference('id_role')->on('roles');
         });
     }
 

@@ -20,7 +20,7 @@ class CreateDepartementsTable extends Migration
             $table->string('departement_name');
             $table->integer('departement_leader')->unsigned();
 
-            $table->foreign('departement_leader')->references('users')->on('id');
+            $table->foreign('departement_leader')->references('id')->on('users');
         });
     }
 

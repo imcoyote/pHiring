@@ -21,6 +21,8 @@ Route::post('pdfRegister', function (){
     echo '</pre>';
 });
 
+Route::get('/commitmentRequestList', 'CommitmentRequestController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

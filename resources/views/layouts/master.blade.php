@@ -8,9 +8,9 @@
     <meta name="author" content="">
     <link rel="icon" href="">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>{{ config('app.name') }}</title>
 
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
 <body>

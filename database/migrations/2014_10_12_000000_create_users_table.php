@@ -25,25 +25,25 @@ class CreateUsersTable extends Migration
 
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('phone_number');
-            $table->tinyInteger('swiss_nationality', false, true);
-            $table->string('working_license');
-            $table->tinyInteger('first_job');
+            $table->string('phone_number')->nullable();
+            $table->tinyInteger('swiss_nationality', false, true)->nullable();
+            $table->string('working_license')->nullable();
+            $table->tinyInteger('first_job')->nullable();
 
-            $table->string('street_name');
-            $table->string('house_nbr');
-            $table->string('city_name');
-            $table->string('canton_name');
-            $table->string('zip_code');
+            $table->string('street_name')->nullable();
+            $table->string('house_nbr')->nullable();
+            $table->string('city_name')->nullable();
+            $table->string('canton_name')->nullable();
+            $table->string('zip_code')->nullable();
 
-            $table->string('training');
-            $table->integer('training_year', false, true);
+            $table->string('training')->nullable();
+            $table->integer('training_year', false, true)->nullable();
 
-            $table->string('reference_name');
-            $table->string('reference_connection');
-            $table->string('reference_enterprise_name');
-            $table->string('reference_phone_number');
-            $table->string('reference_adress');
+            $table->string('reference_name')->nullable();
+            $table->string('reference_connection')->nullable();
+            $table->string('reference_enterprise_name')->nullable();
+            $table->string('reference_phone_number')->nullable();
+            $table->string('reference_adress')->nullable();
 
             $table->integer('role_id')->unsigned();
 

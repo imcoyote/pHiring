@@ -28,8 +28,8 @@ body {
 .sidebar-sticky {
   position: -webkit-sticky;
   position: sticky;
-  top: 48px; /* Height of navbar */
-  height: calc(100vh - 48px);
+  top: $navBarHeight; /* Height of navbar */
+  height: calc(100vh - 125px);
   padding-top: .5rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
@@ -63,6 +63,10 @@ body {
  * Navbar
  */
 
+.hello-line{
+  color: white;
+  display: inline-block;
+}
 .navbar-brand {
   padding-top: .75rem;
   padding-bottom: .75rem;
@@ -86,6 +90,11 @@ body {
 .form-control-dark:focus {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.site-name{
+  font-size: 1.5rem;
+  color: white;
 }
 
 /*

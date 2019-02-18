@@ -18,6 +18,7 @@ class JobOfferControllerTest extends TestCase
         $response->assertStatus(200);
     }
 
+    /*
     public function testJobStore()
     {
         $response = $this->call('post',
@@ -31,4 +32,5 @@ class JobOfferControllerTest extends TestCase
 
         $response->assertStatus('200');
     }
+    */
 }

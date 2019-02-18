@@ -11,22 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'CommitmentRequestController@index')->name('home');
 
+//Job routes
+Route::get('/jobCreate', 'JobOfferController@create');
+Route::post('/jobCreate', 'JobOfferController@store');
+
+//Auth routes
+Auth::routes();
+
+//PDF route
 Route::post('pdfRegister', function (){
     echo '<pre>';
     var_dump($_POST);
     echo '</pre>';
 });
-
-Route::get('/commitmentRequestList', 'CommitmentRequestController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-//Job routes
-Route::get('/jobCreate', 'JobOfferController@create');
-Route::post('/jobCreate', 'JobOfferController@store');

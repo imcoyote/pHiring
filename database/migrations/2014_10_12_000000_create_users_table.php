@@ -45,7 +45,7 @@ class CreateUsersTable extends Migration
             $table->string('reference_phone_number')->nullable();
             $table->string('reference_adress')->nullable();
 
-            $table->integer('role_id')->unsigned();
+            $table->integer('role_id')->unsigned()->default(1);
 
             $table->foreign('role_id')->references('id_role')->on('roles');
         });
